@@ -1,10 +1,13 @@
 const { default: axiosInstance } = require(".");
-
+const baseUrl = "https://quiz-application-9p3q.onrender.com";
 // add exam
 
 export const addExam = async (payload) => {
   try {
-    const response = await axiosInstance.post("/api/exams/add", payload);
+    const response = await axiosInstance.post(
+      baseUrl + "/api/exams/add",
+      payload
+    );
     return response.data;
   } catch (error) {
     return error.response.data;
@@ -14,7 +17,9 @@ export const addExam = async (payload) => {
 // get all exams
 export const getAllExams = async () => {
   try {
-    const response = await axiosInstance.post("/api/exams/get-all-exams");
+    const response = await axiosInstance.post(
+      baseUrl + "/api/exams/get-all-exams"
+    );
     return response.data;
   } catch (error) {
     return error.response.data;
@@ -26,7 +31,7 @@ export const getAllExams = async () => {
 export const getExamById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/get-exam-by-id",
+      baseUrl + "/api/exams/get-exam-by-id",
       payload
     );
     return response.data;
@@ -99,4 +104,4 @@ export const deleteQuestionById = async (payload) => {
   } catch (error) {
     return error.response.data;
   }
-}
+};
