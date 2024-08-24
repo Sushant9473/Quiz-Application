@@ -45,7 +45,7 @@ export const getExamById = async (payload) => {
 export const editExamById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/edit-exam-by-id",
+      baseUrl + "/api/exams/edit-exam-by-id",
       payload
     );
     return response.data;
@@ -59,7 +59,7 @@ export const editExamById = async (payload) => {
 export const deleteExamById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/delete-exam-by-id",
+      baseUrl + "/api/exams/delete-exam-by-id",
       payload
     );
     return response.data;
@@ -73,7 +73,7 @@ export const deleteExamById = async (payload) => {
 export const addQuestionToExam = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/add-question-to-exam",
+      baseUrl + "/api/exams/add-question-to-exam",
       payload
     );
     return response.data;
@@ -85,7 +85,7 @@ export const addQuestionToExam = async (payload) => {
 export const editQuestionById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/edit-question-in-exam",
+      baseUrl + "/api/exams/edit-question-in-exam",
       payload
     );
     return response.data;
@@ -97,7 +97,7 @@ export const editQuestionById = async (payload) => {
 export const deleteQuestionById = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      "/api/exams/delete-question-in-exam",
+      baseUrl + "/api/exams/delete-question-in-exam",
       payload
     );
     return response.data;
