@@ -30,7 +30,7 @@ export const getAllReports = async (filters) => {
 export const getAllReportsByUser = async () => {
   try {
     const response = await axiosInstance.post(
-      "/api/reports/get-all-reports-by-user"
+      baseUrl + "/api/reports/get-all-reports-by-user"
     );
     return response.data;
   } catch (error) {
